@@ -1,5 +1,6 @@
 "use strict"; 
 
+
 /* const numberOfFilms = +prompt('Сколько фильмов вы уже просмотретли?', '');
 
 const personalMovieDB = {
@@ -10,47 +11,70 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+for (let i = 0; i < 2; i++){
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+          b = prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else{
+        console.log('error');
+        i--;
+    }
 
-console.log(personalMovieDB); */
+    
+}
 
-if (1) {
-    console.log('Ok!');
+if (personalMovieDB.count < 10){
+    console.log("Просмотрено доволбно мало фильмов");
+} else if(personalMovieDB.count >= 10 && personalMovieDB.count < 30){
+    console.log("Вы классический зритель");
+} else if(personalMovieDB.count >= 30){
+    console.log("Вы киноман");
 } else {
-    console.log('Error');
+    console.log("Произошла ошибка");
 }
 
 
+console.log(personalMovieDB);
+ */
+let num = 20;
 
-/* if(num<49) {
-    console.log('Error');
-} else if (num> 100) {
-    console.log('Много');
-} else {
-    console.log('Ok!');
+function showFirstMessage(text) {
+     console.log(text);
+     console.log(num);
+}
+
+showFirstMessage("Hello World!");
+console.log(num);
+
+/* console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));
+
+function calc (a, b) {
+    return (a + b);
 } */
 
-//(num === 50) ? console.log('Ok!') : console.log('Error');
+
+function ret() {
+    let num = 50;
 
 
-const num = '50';
-switch (num) {
-    case '49':
-        console.log('Неверно');
-        break;
-    case '100':
-        console.log('Неверно');
-        break;
-    case '50':
-        console.log('В точку!');
-        break;       
-    default:
-        console.log('Не в этот раз');
-        break;  
+    return num;
 }
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function() {
+     console.log("Hello")
+};
+
+logger();
+
+const calc = (a, b) => {
+    console.log('1'); 
+    return a + b 
+    };
