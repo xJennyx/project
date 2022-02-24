@@ -1,5 +1,9 @@
 "use strict"; 
 
+const str = "test";
+const arr = [1, 2, 4];
+
+console.log(arr.length);
 
 /* const numberOfFilms = +prompt('Сколько фильмов вы уже просмотретли?', '');
 
@@ -39,7 +43,7 @@ if (personalMovieDB.count < 10){
 
 console.log(personalMovieDB);
  */
-let num = 20;
+/* let num = 20;
 
 function showFirstMessage(text) {
      console.log(text);
@@ -47,7 +51,7 @@ function showFirstMessage(text) {
 }
 
 showFirstMessage("Hello World!");
-console.log(num);
+console.log(num); */
 
 /* console.log(calc(4, 3));
 console.log(calc(5, 6));
@@ -58,7 +62,7 @@ function calc (a, b) {
 } */
 
 
-function ret() {
+/* function ret() {
     let num = 50;
 
 
@@ -77,4 +81,4 @@ logger();
 const calc = (a, b) => {
     console.log('1'); 
     return a + b 
-    };
+    }; */
