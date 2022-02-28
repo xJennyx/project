@@ -1,5 +1,30 @@
 "use strict"; 
 
+function first() {
+    // Do something
+    setTimeout(function () {
+        console.log(1);
+    }, 500);
+}
+
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log('Я прошел этот урок!');
+}
+
+learnJS('JavaScript', done);
+
 /* const str = "teSt";
 const arr = [1, 2, 4];
 
@@ -31,7 +56,7 @@ console.log(parseFloat(test));  */
 
  //const numberOfFilms = +prompt('Сколько фильмов вы уже просмотретли?', '');
 
-let numberOfFilms;
+/* let numberOfFilms;
 
 function start() {
     numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
@@ -101,7 +126,7 @@ function writeYourGenres() {
     }
 }
 
-writeYourGenres();
+writeYourGenres(); */
 
 //console.log(personalMovieDB);
 
