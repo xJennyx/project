@@ -1,19 +1,16 @@
-const numberOfFilms = +prompt('Сколько фильмов вы уже просмотретли?', '');
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcancel
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+window.addEventListener('load', () =>{
+    const box = document.querySelector('.box');
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+    box.addEventListener('touchstart', (e) => {
+        e.preventDefault();
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
-console.log(personalMovieDB);
+        console.log('Start');
+    });
+});

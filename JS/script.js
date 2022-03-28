@@ -1,28 +1,35 @@
 'use strict'; 
 
-// let y = 1;
-// let x = y = 2;
-// alert(x);
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcancel
 
-//console.log([] + 1 + 2); // "12"
+window.addEventListener('DOMContentLoaded', () =>{
+    const box = document.querySelector('.box');
 
-// alert("1"[0]);
+    box.addEventListener('touchstart', (e) => {
+        e.preventDefault();
 
-//console.log(2 && 1 && null && 0 && undefined);
-// И запинается на лжи
-// ИЛИ запинается на правде
+        console.log('Start');
+        console.log(e.targetTouches);
+    });
 
-//console.log(!!( 1 && 2 ) === (1 && 2));
-                  //3
-//alert( null || 2 && 3 || 4 ); 
+    box.addEventListener('touchmove', (e) => {
+        e.preventDefault();
 
-/* const a = [1, 2, 3]; 
-const b = [1, 2, 3];
+        console.log(e.changedTouches[0].pageX);
+    });
 
-console.log(a==b); */
+    box.addEventListener('touchend', (e) => {
+        e.preventDefault();
 
-//alert( +"Infinity" ); 
+        console.log('End');
+    });
+});
 
-//console.log("Ёжик" > "яблоко"); // false
-
-//console.log(0 || "" || 2 || undefined || true || falsе);
+// touches
+// targetTouches
+// changedTouches
